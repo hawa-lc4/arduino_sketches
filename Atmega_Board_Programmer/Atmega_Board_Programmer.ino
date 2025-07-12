@@ -7,6 +7,8 @@
 // make some of these false to reduce compile size (the ones you don't want).
 // The Atmega328 is always included (Both Uno and Lilypad versions).
 
+#include <Arduino.h>
+
 #define USE_ATMEGA8 true
 #define USE_ATMEGA16U2 true    // Uno USB interface chip
 #define USE_ATMEGA32U4 true    // Leonardo

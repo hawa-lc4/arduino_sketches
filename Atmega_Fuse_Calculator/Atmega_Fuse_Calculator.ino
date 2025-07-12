@@ -16,6 +16,8 @@
 // Version 1.10: Added support for At90USB82, At90USB162
 // Version 1.11: Got rid of compiler warnings in IDE 1.6.7
 
+#include <Arduino.h>
+
 #define VERSION "1.11"
 
 /*
@@ -48,8 +50,9 @@
 
 #include <SPI.h>
 
-const byte CLOCKOUT = 9;
-const byte RESET = 10;  // --> goes to reset on the target board
+/* the following pin assingment is for Atmega32U4 (Pro Micro) */
+const byte CLOCKOUT = 10;
+const byte RESET = 18;  // --> goes to reset on the target board
 
 const int ENTER_PROGRAMMING_ATTEMPTS = 50;
 
