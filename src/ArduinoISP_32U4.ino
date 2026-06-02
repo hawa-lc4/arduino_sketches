@@ -261,8 +261,8 @@ typedef struct param {
 parameter param;
 
 // this provides a heartbeat on pin 9, so you can tell the software is running.
-uint8_t hbval = 128;
-int8_t hbdelta = 8;
+uint8_t hbval = 64;
+int8_t hbdelta = 4;
 void heartbeat() {
   static unsigned long last_time = 0;
   unsigned long now = millis();
@@ -270,10 +270,10 @@ void heartbeat() {
     return;
   }
   last_time = now;
-  if (hbval > 192) {
+  if (hbval > 96) {
     hbdelta = -hbdelta;
   }
-  if (hbval < 32) {
+  if (hbval < 8) {
     hbdelta = -hbdelta;
   }
   hbval += hbdelta;
