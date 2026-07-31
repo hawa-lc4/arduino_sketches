@@ -33,14 +33,13 @@
 */
 #pragma GCC optimize ("-O0") // avoid GCC memcpy inline
 
-#include <Arduino.h>
 #include <avr/boot.h>
 #include <avr/pgmspace.h>
 #include <string.h>  // for memcpy
 
 extern "C"
   {
-  #include "G:\github_repo\arduino_sketches\Atmega_Self_Read_Signature\md5.h"
+  #include "md5.h"
   }
 
 #define SIGRD 5
